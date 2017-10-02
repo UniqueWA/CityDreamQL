@@ -20,7 +20,7 @@ class Common(Configuration):
     SECRET_KEY = values.SecretValue()
 
     # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = values.BooleanValue(True)
+    DEBUG = values.BooleanValue(False)
 
     ALLOWED_HOSTS = ['*']
 
@@ -37,7 +37,14 @@ class Common(Configuration):
         'debug_toolbar',
 
         'CityDreamQL.users',
+        'graphene_django',
+        'schema',
+
     ]
+
+    GRAPHENE = {
+        'SCHEMA': 'schema.schema.schema'  # Where your Graphene schema lives
+    }
 
     MIDDLEWARE = [
         'django.middleware.security.SecurityMiddleware',
