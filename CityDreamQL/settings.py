@@ -20,7 +20,7 @@ class Common(Configuration):
     SECRET_KEY = values.SecretValue()
 
     # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = values.BooleanValue(False)
+    DEBUG = values.BooleanValue(True)
 
     ALLOWED_HOSTS = []
 
