@@ -6,3 +6,4 @@ django-extensions==1.7.9
 Django==1.11.2
 psycopg2==2.7.1
 graphene>=2.0.dev
+graphene-django>=2.0.dev
