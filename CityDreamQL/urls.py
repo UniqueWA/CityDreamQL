@@ -14,4 +14,4 @@ if settings.DEBUG:
         url(r'^__debug__/', include(debug_toolbar.urls)),
         url(r'^graphql', GraphQLView.as_view(graphiql=True)),
 
-    ]
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
